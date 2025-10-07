@@ -27,12 +27,12 @@ export default function AccountingHero() {
   ];
 
   return (
-    <div className="relative  pb-35 bg-gray-50 overflow-hidden">
+    <div className="relative pb-35 bg-gray-50 overflow-hidden">
       {/* Network Background - Left Side */}
       <img
         src={circleline2}
         alt=""
-        className="absolute left-1 w-auto max-md:hidden  top-[-9%] object-contain"
+        className="absolute left-1 w-auto max-md:hidden  top-[-3%] object-contain"
         style={{ zIndex: 0 }}
       />
 
@@ -51,7 +51,7 @@ export default function AccountingHero() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="flex items-center    rounded-2xl gap-5 px-6 py-3.5"
+              className="flex items-center border-1 shadow-xl md:border-none md:shadow-none bg-white md:bg-transparent  rounded-2xl gap-5 px-6 py-3.5"
             >
               <div className="w-20 h-20 border-1 rounded-2px shadow-2xl rounded-2xl bg-gray-50 flex items-center justify-center">
                 <img
@@ -74,10 +74,10 @@ export default function AccountingHero() {
 
         {/* Hero Content */}
         <div className="text-center mt-40 max-w-4xl mx-auto">
-          <p className="text-black text-2xl font-semibold mb-4 tracking-wide">
+          <p className="text-black text-xl md:text-2xl font-semibold mb-4 tracking-wide">
             Who are we
           </p>
-          <h1 className="text-6xl font-questrial text-black mb-6 tracking-wide leading-tight">
+          <h1 className="text-4xl md:text-6xl font-questrial text-black mb-6 tracking-wide leading-tight">
             The future Of Accounting
             <br />
             Powered By AI

@@ -20,7 +20,7 @@ export default function meetSection() {
             </h2>
 
             {/* Underline */}
-            <div className="flex justify-center">
+            <div className="flex justify-center md:justify-start">
               <div className="h-[1px] w-2/3 sm:w-3/4 md:w-4/5 lg:w-[600px] bg-[#1a1a1a] mb-4 sm:mb-5 md:mb-6"></div>
             </div>
 

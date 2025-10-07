@@ -1,25 +1,62 @@
+/* -------------------------------
+   Import fonts
+--------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Questrial:ital,wght@0,400;0,600;0,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,700&display=swap");
+
+/* -------------------------------
+   Tailwind & animation imports
+--------------------------------- */
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
-
+/* -------------------------------
+   Custom variants (optional)
+--------------------------------- */
 @custom-variant dark (&:is(.dark *));
 
-/* index.css */
+/* -------------------------------
+   Body font (Questrial for small text)
+--------------------------------- */
+body {
+  font-family: "Questrial", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* -------------------------------
+   Font utilities
+--------------------------------- */
 .font-questrial {
   font-family: "Questrial", sans-serif;
+}
+
+.font-questrial-normal {
+  font-weight: 400;
+}
+.font-questrial-semibold {
+  font-weight: 600;
+}
+.font-questrial-bold {
+  font-weight: 700;
 }
 
 .font-rubik {
   font-family: "Rubik", sans-serif;
 }
 
-
+.font-rubik-normal {
+  font-weight: 400;
+}
+.font-rubik-medium {
+  font-weight: 500;
+}
+.font-rubik-bold {
+  font-weight: 700;
+}
 
 :root {
-    font-family: "Questrial", sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  font-family: "Questrial", sans-serif;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
