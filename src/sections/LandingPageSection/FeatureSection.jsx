@@ -25,13 +25,18 @@ export default function FeaturesSection() {
   return (
     <section className="w-full bg-[#f0f9fc] py-12 sm:py-16 md:py-20 lg:py-30">
       <div className="px-6 sm:px-8 md:px-12 lg:px-16 xl:px-40">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12 ">
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (
-              <div key={index} className="flex flex-col items-start">
+              <div key={index} className="flex flex-col items-start group">
                 {/* Icon Container */}
-                <div className="bg-white rounded-2xl sm:p-4 md:p-5 shadow-sm mb-6">
+                <div
+                  className="bg-white cursor-pointer rounded-2xl sm:p-4 md:p-5 mb-6 flex-shrink-0 
+               shadow-[0_0_10px_3px_rgba(173,216,230,0.45),0_0_30px_8px_rgba(173,216,230,0.25)]
+               transition-shadow duration-500 ease-in-out
+               group-hover:shadow-[0_0_15px_5px_rgba(141,227,254,0.6),0_0_40px_12px_rgba(141,227,254,0.4)]"
+                >
                   <Icon
                     className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-[#1a1a1a]"
                     strokeWidth={1.5}

@@ -45,7 +45,7 @@ function QuestionSection() {
 
   return (
     <div className="w-full pt-20 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0 lg:ml-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0 lg:ml-10">
         {/* Left Column */}
         <div className=" lg:border-r lg:border-black lg:pr-8 xl:pr-12 max-lg:flex max-lg:flex-col max-lg:items-center max-lg:text-center mb-5 ">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6px font-bold leading-tight  max-w-[400px]">

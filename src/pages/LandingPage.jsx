@@ -1,6 +1,5 @@
 import React from "react";
 import HeroSections from "../sections/LandingPageSection/HeroSections";
-import Navbar from "../components/Navbar";
 import WHoareweSection from "../sections/LandingPageSection/WhoareweSection";
 import MeetSection from "../sections/LandingPageSection/MeetSection";
 import FeaturesSection from "../sections/LandingPageSection/FeatureSection";
@@ -12,12 +11,10 @@ import TestimonialsSection from "@/sections/LandingPageSection/TestimonialsSecti
 import TestimonialsSlider from "../sections/LandingPageSection/TestimonialsSlider";
 import QuestionSection from "../sections/LandingPageSection/QuestionSection";
 import RobotSection from "../sections/LandingPageSection/RobotSection";
-import Footer from "../components/Footer";
 
 function LandingPage() {
   return (
     <div>
-      <Navbar />
       <HeroSections />
       <WHoareweSection />
       <MeetSection />
@@ -30,7 +27,6 @@ function LandingPage() {
       <TestimonialsSlider />
       <QuestionSection />
       <RobotSection />
-      <Footer />
     </div>
   );
 }

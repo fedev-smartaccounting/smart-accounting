@@ -1,12 +1,21 @@
-import heroImage from "@/assets/images/heroimage.jpeg";
+import HeroSectionBG from "@/assets/images/HeroSectionBG.png";
+import HeroRobot from "@/assets/images/HeroImage.png";
 
 export default function HeroSection() {
   return (
     <div className="relative w-full h-screen overflow-hidden">
+      {/* Background Image */}
       <img
-        src={heroImage}
-        alt="Hero"
+        src={HeroSectionBG}
+        alt="Hero Background"
         className="absolute top-0 left-0 w-full h-full object-cover object-center brightness-95"
+      />
+
+      {/* Foreground Robot Image */}
+      <img
+        src={HeroRobot}
+        alt="Hero Robot"
+        className="absolute top-0 left-0 w-full h-full object-cover object-center brightness-100"
       />
 
       {/* Content Container */}

@@ -1,12 +1,70 @@
 import React, { useState } from "react";
 import logoimage from "../assets/images/logoimage.png";
-import Usericon from "../assets/icons/User.svg";
+import { Globe, ChevronDown } from "lucide-react";
+
+const LanguageDropdown = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedLang, setSelectedLang] = useState("EN");
+
+  const handleLanguageSelect = (lang) => {
+    setSelectedLang(lang);
+    setIsOpen(false);
+  };
+
+  return (
+    <div className="relative">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex items-center gap-2 text-white hover:text-[#00d4ff] transition-colors"
+      >
+        <Globe className="w-5 h-5" />
+        <span className="text-sm font-medium">{selectedLang}</span>
+        <ChevronDown
+          className={`w-4 h-4 transition-transform ${
+            isOpen ? "rotate-180" : ""
+          }`}
+        />
+      </button>
+
+      {isOpen && (
+        <>
+          <div
+            className="fixed inset-0 z-10"
+            onClick={() => setIsOpen(false)}
+          />
+          <div className="absolute top-full right-0 mt-5 bg-white rounded-tr-2xl rounded-bl-xl rounded-br-2xl shadow-lg overflow-hidden z-20 min-w-[100px]">
+            <button
+              onClick={() => handleLanguageSelect("EN")}
+              className={`w-full px-4 py-3 text-left text-sm font-medium transition-colors ${
+                selectedLang === "EN"
+                  ? "bg-[#36cdfe] text-white"
+                  : "text-gray-700 hover:bg-gray-100"
+              }`}
+            >
+              English
+            </button>
+            <button
+              onClick={() => handleLanguageSelect("ES")}
+              className={`w-full px-4 py-3 text-left text-sm font-medium transition-colors ${
+                selectedLang === "ES"
+                  ? "bg-[#36cdfe] text-white"
+                  : "text-gray-700 hover:bg-gray-100"
+              }`}
+            >
+              Español
+            </button>
+          </div>
+        </>
+      )}
+    </div>
+  );
+};
 
 function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: "About", href: "#" },
+    { name: "About", href: "/about" },
     { name: "Services", href: "#" },
     { name: "Sign-in", href: "#" },
   ];
@@ -37,17 +95,11 @@ function Navbar() {
 
         {/* Right Side Buttons */}
         <div className="flex items-center gap-3 sm:gap-4 md:gap-6">
-          {/* User Icon Button */}
-          <button className="border-2 border-white rounded-full p-2 sm:p-2.5 md:p-3 hover:bg-white hover:border-white group transition duration-300">
-            <img
-              src={Usericon}
-              alt="User"
-              className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7 brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition duration-300"
-            />
-          </button>
+          {/* Language Dropdown */}
+          <LanguageDropdown />
 
-          {/* Contact Button - Hidden on small mobile */}
-          <button className="hidden md:flex xs:block px-5 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 border-2 border-white rounded-full text-white text-sm sm:text-base md:text-lg font-medium hover:bg-white hover:text-black active:bg-[#36cdfe] active:border-[#36cdfe] active:text-white transition duration-200">
+          {/* Contact Button - Hidden on mobile, visible on sm and up */}
+          <button className="hidden sm:flex px-5 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 border-2 border-white rounded-full text-white text-sm sm:text-base md:text-lg font-medium hover:bg-white hover:text-black active:bg-[#36cdfe] active:border-[#36cdfe] active:text-white transition duration-200">
             Contact
           </button>
 
@@ -100,6 +152,7 @@ function Navbar() {
               <path d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
+
           <ul className="space-y-6">
             {navLinks.map((link, index) => (
               <li key={index}>
