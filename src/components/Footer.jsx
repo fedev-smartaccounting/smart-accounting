@@ -14,7 +14,7 @@ export default function Footer() {
           {/* Logo & Tagline */}
           <div className="lg:col-span-4 space-y-6">
             <div className="flex items-center gap-2">
-              <img src={FooterLogo} alt="FooterLogo" />
+              <img src={FooterLogo} alt="FooterLogo" className="max-md:w-33"/>
             </div>
 
             {/* Taglines */}
@@ -25,7 +25,7 @@ export default function Footer() {
               {taglines.map((text, idx) => (
                 <h2
                   key={text}
-                  className={`text-2xl lg:text-3xl text-[#98f7cd] text-[${HIGHLIGHT}]`}
+                  className={`text-2xl lg:text-3xl text-[${HIGHLIGHT}]`}
                 >
                   {text}
                 </h2>
@@ -37,7 +37,7 @@ export default function Footer() {
               <a
                 key={idx}
                 href={href || "#"}
-                className={`flex items-center gap-3 hover:text-[#98f7cd] transition-colors`}
+                className={`flex items-center gap-3 hover:text-[${HIGHLIGHT}] transition-colors`}
               >
                 <Icon
                   className={`w-5 h-5 text-[${HIGHLIGHT}] mt-${
@@ -59,7 +59,7 @@ export default function Footer() {
                   <li key={text}>
                     <a
                       href={href}
-                      className={`text-md text-gray-300 hover:text-[#98f7cd] transition-colors`}
+                      className={`text-md text-gray-300 hover:text-[${HIGHLIGHT}] transition-colors`}
                     >
                       {text}
                     </a>
@@ -78,7 +78,7 @@ export default function Footer() {
                 aria-label={label}
                 className={`text-[${HIGHLIGHT}] hover:text-white transition-colors`}
               >
-                <Icon className="w-8 h-8 text-[#98f7cd]" />
+                <Icon className="w-8 h-8" />
               </a>
             ))}
           </div>

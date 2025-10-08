@@ -39,8 +39,8 @@ function RobotSection() {
             </div>
 
             {/* Back to Top Button */}
-            <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 md:gap-5 lg:gap-7 group cursor-pointer">
-              <p className="text-sm sm:text-base md:text-lg text-neutral-400 group-hover:text-[#36cdfe] transition-colors duration-300 ease-in-out whitespace-nowrap">
+            <div className="flex cursor-pointer flex-col sm:flex-row items-center gap-3 sm:gap-4 md:gap-5 lg:gap-7 group">
+              <p className="text-sm sm:text-base cursor-pointer md:text-lg text-neutral-400 group-hover:text-[#36cdfe] transition-colors duration-300 ease-in-out whitespace-nowrap">
                 Back to top
               </p>
               <button

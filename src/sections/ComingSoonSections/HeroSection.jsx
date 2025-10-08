@@ -1,5 +1,6 @@
 import React from "react";
 import smartyworker from "@/assets/images/ComingSoonPageImages/smartyworker.png";
+import { Link } from "react-router-dom";
 
 function HeroSection() {
   return (
@@ -15,9 +16,11 @@ function HeroSection() {
           We're working hard to bring you something amazing. <br /> It'll be
           worth the wait!
         </p>
-        <button className="mt-10 py-3 px-20 border border-black rounded-4xl cursor-pointer hover:border-none hover:bg-[#36cdfe] hover:text-white transition-colors duration-300">
-          Return Home
-        </button>
+        <Link to="/">
+          <button className="mt-10 py-3 px-20 border border-black rounded-4xl cursor-pointer hover:border-none hover:bg-[#36cdfe] hover:text-white transition-colors duration-300">
+            Return Home
+          </button>
+        </Link>
       </div>
       <div className="flex justify-center items-center w-full pb-20">
         <img src={smartyworker} alt="smartyworker" />
