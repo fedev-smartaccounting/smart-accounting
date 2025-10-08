@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import logoimage from "../assets/images/logoimage.png";
 import { Globe, ChevronDown } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const LanguageDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -70,14 +71,19 @@ function Navbar() {
   ];
 
   return (
-    <nav className="absolute top-0 left-0 w-full z-50">
+    <nav className="sticky top-0 w-full z-50 bg-[#2A3688]">
       <div className="px-6 sm:px-8 md:px-12 lg:px-16 xl:px-40 py-4 sm:py-6 flex justify-between items-center">
         {/* Logo */}
-        <img
-          src={logoimage}
-          alt="logo"
-          className="h-12 sm:h-14 md:h-16 w-auto"
-        />
+        <Link
+          to="/"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
+          <img
+            src={logoimage}
+            alt="logo"
+            className="h-12 sm:h-14 md:h-16 w-auto cursor-pointer"
+          />
+        </Link>
 
         {/* Desktop Nav Links */}
         <ul className="hidden md:flex items-center gap-8 lg:gap-12">
